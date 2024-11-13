@@ -2,6 +2,7 @@ import 'package:absolute_beginner/base/res/style/app_styles.dart';
 import 'package:absolute_beginner/base/widgets/app_layoutbuilder_widget.dart';
 import 'package:absolute_beginner/base/widgets/big_circle.dart';
 import 'package:absolute_beginner/base/widgets/big_dot.dart';
+import 'package:absolute_beginner/base/widgets/text_style_third.dart';
 import 'package:flutter/material.dart';
 
 class TicketView extends StatelessWidget {
@@ -30,11 +31,7 @@ class TicketView extends StatelessWidget {
                   //show departure and destination with icon first line
                   Row(
                     children: [
-                      Text(
-                        "NYC",
-                        style: AppStyles.headLineStyle3
-                            .copyWith(color: Colors.white),
-                      ),
+                      const TextStyleThird(),
                       Expanded(child: Container()),
                       const BigDot(),
                       Expanded(
