@@ -147,12 +147,11 @@ class TicketView extends StatelessWidget {
                   //show departure and destination names with time
                   Row(
                     children: [
-                        width: 100,
-                        child: Text(
-                          "Date",
-                          style: AppStyles.headLineStyle4
-                              .copyWith(color: Colors.white),
-                        ),
+                      Text(
+                        "Date",
+                        style: AppStyles.headLineStyle4
+                            .copyWith(color: Colors.white),
+                      ),
                       Expanded(child: Container()),
                       Text(
                         "Departure Time",
