@@ -1,5 +1,6 @@
 import 'package:absolute_beginner/base/res/media.dart';
 import 'package:absolute_beginner/base/res/style/app_styles.dart';
+import 'package:absolute_beginner/base/utils/app_json.dart';
 import 'package:absolute_beginner/base/widgets/app_double_text.dart';
 import 'package:absolute_beginner/base/widgets/ticket_view.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -80,7 +81,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                const TicketView()
+                SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: ticketList
+                          .take(4)
+                          .map((singleTicket) =>
+                              TicketView(ticket: singleTicket))
+                          .toList(),
+                    ))
               ],
             ),
           ),
