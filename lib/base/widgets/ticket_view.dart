@@ -1,4 +1,5 @@
 import 'package:absolute_beginner/base/res/style/app_styles.dart';
+import 'package:absolute_beginner/base/widgets/app_column_text_layout.dart';
 import 'package:absolute_beginner/base/widgets/app_layoutbuilder_widget.dart';
 import 'package:absolute_beginner/base/widgets/big_circle.dart';
 import 'package:absolute_beginner/base/widgets/big_dot.dart';
@@ -118,74 +119,23 @@ class TicketView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          TextStyleThird(
-                            text: "1 OCT",
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          TextStyleForth(
-                            text: "Date",
-                          ),
-                        ],
+                      AppColumnTextLayout(
+                        topText: "1 OCT",
+                        bottonText: "Date",
+                        alignment: CrossAxisAlignment.start,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          TextStyleThird(
-                            text: "08:00AM",
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          TextStyleForth(
-                            text: "Departure time",
-                          ),
-                        ],
+                      AppColumnTextLayout(
+                        topText: "8:30Am",
+                        bottonText: "Departure Time",
+                        alignment: CrossAxisAlignment.center,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          TextStyleThird(
-                            text: "23",
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          TextStyleForth(
-                            text: "Number",
-                          ),
-                        ],
+                      AppColumnTextLayout(
+                        topText: "23",
+                        bottonText: "Number",
+                        alignment: CrossAxisAlignment.end,
                       ),
-                      // Expanded(child: Container()),
-                      // const TextStyleThird(
-                      //   text: "08:00Am",
-                      // ),
-                      // Expanded(child: Container()),
-                      // const TextStyleThird(
-                      //   text: "23",
-                      // ),
                     ],
                   ),
-                  //show departure and destination names with time
-                  /*Row(
-                    children: [
-                      const TextStyleForth(
-                        text: "date",
-                      ),
-                      Expanded(child: Container()),
-                      const TextStyleForth(
-                        text: "departure time",
-                      ),
-                      Expanded(child: Container()),
-                      const TextStyleForth(
-                        text: "Number",
-                      ),
-                    ],
-                  ),*/
                 ],
               ),
             ),
