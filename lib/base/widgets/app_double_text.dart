@@ -1,4 +1,5 @@
 import 'package:absolute_beginner/base/res/style/app_styles.dart';
+import 'package:absolute_beginner/screens/all_tickets.dart';
 import 'package:flutter/material.dart';
 
 class AppDoubleText extends StatelessWidget {
@@ -14,7 +15,14 @@ class AppDoubleText extends StatelessWidget {
       children: [
         Text(bigText, style: AppStyles.headLineStyle2),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute<void>(
+                builder: (BuildContext context) => const AllTickets(),
+              ),
+            );
+          },
           child: Text(
             smallText,
             style: AppStyles.textStyle.copyWith(
